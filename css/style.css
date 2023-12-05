@@ -1,0 +1,646 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html body {
+    height: 100;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    font-family: 'Candal', serif; /* Apply the font to the entire body */
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:'Candal', serif;
+    color:#444;
+    margin: 5px;
+
+
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.btn {
+    padding: .5rem 1rem;
+    background: #006669;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+
+.btn-big {
+    padding: .7rem 1rem;
+    line-height: 1.3rem;
+}
+
+
+
+
+
+
+
+
+.btn:hover{
+    color: white !important;
+    background: #005255;
+}
+
+
+.text-input {
+
+
+    padding: .7rem 1rem;
+    display: block;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+
+
+}
+
+
+
+
+
+
+
+
+/* NAVBAR */
+
+
+
+
+header {
+    background-color: #333; /* Darken the background color */
+    height: 66px;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+
+header * {
+    color: #fff;
+}
+
+
+header .logo {
+    height: inherit;
+}
+
+
+header .logo-text {
+    margin: 9px;
+}
+
+
+header .logo-text span {
+    color: aquamarine;
+}
+
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+
+header ul li ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    display: none;
+    z-index: 8888;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+header ul li ul li {
+    width: 100%;
+}
+
+
+header ul li ul li a {
+    padding: 10px;
+    background: #fff;
+    color: #444;
+    display: block;
+    text-decoration: none;
+}
+
+
+header ul li ul li a.logout {
+    color: red;
+}
+
+
+header ul li ul li a:hover {
+    background: #d5d6d6;
+}
+
+
+header ul li a {
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+
+header ul li a:hover {
+    background: #006669;
+    transition: 0.5s;
+}
+
+
+header .menu-toggle {
+    display: none;
+}
+
+
+
+
+.page-wrapper {
+    min-height: 100%;
+}
+
+
+.page-wrapper a:hover {
+    color: #006669;
+}
+
+
+
+
+/* Post Sliders */
+
+
+.post-sliders{
+    position: relative;
+   
+}
+
+
+.post-sliders .slider-title {
+    text-align: center;
+    margin: 30px auto;
+}
+
+
+.post-sliders .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+}
+
+
+.post-sliders .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+}
+
+
+.post-sliders .post-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+   
+}
+
+
+.post-sliders .post-wrapper .post{
+    height: 300px;
+    width: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+}
+
+
+.post-sliders .post-wrapper .post .post-info {
+    height: 130px;
+    padding: 0px 5px;
+   
+}
+
+
+
+
+.post-sliders .post-wrapper .post .slider-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+
+
+/* Content */
+
+
+.content {
+    width: 90%;
+    margin: 30px auto 30px;
+   
+}
+
+
+.content .main-content {
+    width: 70%;
+    float: left;
+   
+}
+
+
+.content .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+
+.content .main-content.single .post-title {
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+
+
+
+.content .popular .post  {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+
+
+
+
+}
+
+
+
+
+.content .popular .post img {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+.content .main-content .post .preview-text {
+    line-height: 1.5em;
+    font-size: 1.03em;
+    color: #444;
+   
+}
+
+
+
+
+
+
+
+
+
+
+.content .main-content .post .read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #005255;
+    background: transparent;
+    border-radius: 0px;
+    color: #005255 !important;
+}
+
+
+.content .main-content .post .read-more:hover {
+    background: #006669;
+    color: white !important;
+    transition: .25s;
+}
+
+
+.content .main-content .post .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+
+.content .main-content .post .post-preview {
+    width: 60%;
+    padding: 10px;
+    float: right;
+}
+
+
+.content .main-content .recent-post-title {
+    margin: 20px;
+}
+
+
+/* Adjusted styles for the sidebar */
+.content .sidebar {
+    width: 30%;
+    float: left;
+    height: 300px;
+}
+
+
+.content .sidebar.single {
+    padding: 0px 10px;
+}
+
+
+
+
+.content .sidebar .section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.content .sidebar .section.search {
+    margin-top: 30px;
+}
+
+
+.content .sidebar .section.search ul {
+    margin: 0;
+    padding: 15px 0;
+    list-style: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+.content .sidebar .section.search .text-input {
+    width: 100%; /* Make the search input full width */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* Styling for the topics section */
+.content .sidebar .section.topics ul li a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+
+.content .sidebar .section.topics ul li a:hover {
+    background-color: #f8f8f8;
+}
+
+
+
+
+/* Footer */
+
+
+
+.footer {
+    background: #303036;
+    color: #d3d3d3;
+    min-height: 400px; 
+    position: relative;
+}
+
+.footer .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Adjusted for responsiveness */
+    justify-content: space-around; /* Adjusted for aesthetics */
+    padding: 20px; /* Adjusted for spacing */
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 20px; /* Adjusted for spacing */
+    border: 1px solid white;
+    border-radius: 5px; /* Added for aesthetics */
+    margin: 10px; /* Adjusted for spacing */
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .about h1 span {
+    color: #05f7ff;
+}
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid #686868; /* Adjusted border color */
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+    border: 1px solid #05f7ff; /* Adjusted border color on hover */
+    color: #05f7ff;
+    transition: all .3s;
+}
+
+.footer .footer-content .links {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: all .3s;
+}
+
+.footer .footer-content .links ul a:hover {
+    color: #05f7ff;
+    margin-left: 15px;
+    transition: all .3s;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background: #272727;
+    color: #beddbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+    border-radius: 5px; /* Added for aesthetics */
+}
+
+.footer .footer-content .contact-form .contact-input:focus {
+    background: #1a1a1a;
+}
+
+.footer .footer-content .contact-form .contact-btn {
+    float: right;
+    font-size: 1.1em;
+    font-family: 'Lora', serif;
+}
+
+.footer .footer-bottom {
+    background: #344a40;
+    color: #686868;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+/* Media Query for Phones */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    }
+
+    header {
+        height: auto; /* Adjust header height for better display */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    header .logo-text {
+        margin: 5px; /* Adjust margin for better spacing */
+    }
+
+    header ul {
+        flex-direction: column; /* Stack menu items vertically for better mobile display */
+        align-items: stretch; /* Stretch menu items for full width */
+    }
+
+    header ul li {
+        float: none; /* Remove float for better stacking */
+        width: 100%; /* Make menu items full width */
+        text-align: center; /* Center align menu items */
+    }
+
+    header ul li ul {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Make submenus full width */
+    }
+
+    .post-sliders .slider-title,
+    .post-sliders .next,
+    .post-sliders .prev {
+        font-size: 1.5em; /* Adjust font size for better visibility */
+    }
+
+    .post-sliders .post-wrapper .post {
+        width: 100%; /* Make posts full width */
+    }
+
+    .content .main-content,
+    .content .sidebar {
+        width: 100%; /* Make main content and sidebar full width */
+        float: none; /* Remove float for better stacking */
+    }
+
+    .content .main-content.single {
+        padding: 20px; /* Adjust padding for better spacing */
+    }
+
+    .content .main-content .post .read-more {
+        display: none; /* Hide the "Read More" button on smaller screens */
+    }
+
+    .content .sidebar .section,
+    .content .sidebar.single {
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    .footer .footer-content {
+        flex-direction: column; /* Stack footer content vertically for better mobile display */
+    }
+}
